@@ -10,7 +10,9 @@ import { CookieService } from 'ngx-cookie-service';
 export class AuthService {
 
   private readonly URL = environment.api
+
   constructor(private http: HttpClient, private cookie: CookieService) { }
+
   sendCredentials(email: string, password: string): Observable<any> {
 
     const body = {

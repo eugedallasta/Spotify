@@ -10,7 +10,7 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit {
-  errorSession: boolean = false
+  errorSession: boolean = false;
   formLogin: FormGroup = new FormGroup({});
 
   constructor(private authService: AuthService,
@@ -45,7 +45,7 @@ export class LoginPageComponent implements OnInit {
         this.router.navigate(['/', 'tracks'])
       },
         err => {//TODO error 400>=
-          this.errorSession = true
+          this.errorSession = true;
           console.log('⚠⚠⚠⚠Ocurrio error con tu email o password');
         })
 
